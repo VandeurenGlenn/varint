@@ -7,8 +7,8 @@ import encode from './exports/encode.js'
 import decode from './exports/decode.js'
 import length from './exports/length.js'
 
-test('published runtime is byte-identical to the existing Git dependency', async () => {
-  for (const file of ['index.js', 'encode.js', 'decode.js', 'length.js']) {
+test('legacy numeric runtime is byte-identical to the existing Git dependency', async () => {
+  for (const file of ['encode.js', 'decode.js', 'length.js']) {
     const original = execFileSync('git', ['show', `a7bcb37c7816865b361a9483a3062eeabc2e2cb1:exports/${file}`])
     assert.deepEqual(await readFile(new URL(`exports/${file}`, import.meta.url)), original)
   }
