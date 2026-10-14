@@ -1,5 +1,5 @@
 {
-  "name": "varint",
+  "name": "@vandeurenglenn/varint",
   "version": "6.0.0",
   "description": "protobuf-style varint bytes - use msb to create integer values of varying sizes",
   "exports": {
@@ -9,12 +9,14 @@
     "./encodingLength": "./exports/length.js"
   },
   "type": "module",
+  "publishConfig": { "access": "public" },
+  "files": ["exports", "README.md"],
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js && node --test compatibility.test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/chrisdickinson/varint.git"
+    "url": "git+https://github.com/VandeurenGlenn/varint.git"
   },
   "keywords": [
     "varint",

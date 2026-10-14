@@ -1,4 +1,17 @@
-# varint
+# @vandeurenglenn/varint
+
+ESM fork of Chris Dickinson's MIT-licensed `varint` 6.0.0. This scoped
+release preserves the runtime from commit `a7bcb37c7816865b361a9483a3062eeabc2e2cb1`.
+Only packaging changes: no wire-format or numeric-range changes.
+
+```sh
+npm install @vandeurenglenn/varint
+```
+
+Use `import varint from '@vandeurenglenn/varint'`. Existing consumers may retain
+their `varint` import through the npm alias `npm:@vandeurenglenn/varint@^6.0.0`.
+Inputs are JavaScript Numbers up to `Number.MAX_SAFE_INTEGER`, not native BigInt.
+Upstream source: https://github.com/chrisdickinson/varint
 
 > encode whole numbers to an array of [protobuf-style varint bytes](https://developers.google.com/protocol-buffers/docs/encoding#varints) and also decode them.
 
